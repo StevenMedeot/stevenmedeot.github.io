@@ -35,23 +35,30 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Steven Medeot</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">Steven Medeot</a>
     </div>
+	<div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#unity">Unity</a></li>
+          <li><a href="#unity">Unity 3D</a></li>
           <li><a href="#unreal">Unreal Engine</a></li>
           <li><a href="#mobile">Mobile</a></li>
-          <li><a href="#other">Other</a></li>
+		  <li><a href="#other">Other</a><li>
         </ul>
       </li>
-   <li><a href="https://github.com/StevenMedeot">GitHub</a></li>
-    </ul>
-  </div>
+	  <li><a href="https://github.com/StevenMedeot">GitHub</a></li>
+      </ul>
+    </div>
+	</div>
 </nav>
 
 <a id="home"></a>
