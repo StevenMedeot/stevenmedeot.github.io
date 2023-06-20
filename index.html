@@ -25,11 +25,6 @@
 	{
 		text-decoration: underline;	
 	}
-	.row
-	{
-		<!-- border-bottom: 1px solid black;-->
-	}
-	
 	.black-bg
 	{
 		background-color: #2f2f2f; 
@@ -42,269 +37,256 @@
 		color: white;
 	}
 	.masthead {
-  height: 100vh;
-  min-height: 500px;
-  background-image: url('landing.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+		height: 100vh;
+		min-height: 500px;
+		background-image: url('landing.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		}
 </style>
 <body>
-
-<div class="container-fluid text-center">
-	<div class="row">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!--<a class="navbar-brand" href="#home">Steven Medeot</a>-->
-    </div>
-	<div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#unity">Unity 3D</a></li>
-          <li><a href="#unreal">Unreal Engine</a></li>
-          <li><a href="#mobile">Mobile</a></li>
-		  <li><a href="#other">Other</a><li>
-        </ul>
-      </li>
-	  <li><a href="https://github.com/StevenMedeot">GitHub</a></li>
-      </ul>
-    </div>
+	<div class="container-fluid text-center">
+		<div class="row">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<!--<a class="navbar-brand" href="#home">Steven Medeot</a>-->
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+		<li><a href="#home">Home</a></li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+			<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			<li><a href="#unity">Unity 3D</a></li>
+			<li><a href="#unreal">Unreal Engine</a></li>
+			<li><a href="#mobile">Mobile</a></li>
+			<li><a href="#other">Other</a><li>
+			</ul>
+		</li>
+		<li><a href="https://github.com/StevenMedeot">GitHub</a></li>
+		</ul>
+		</div>
+		</div>
+	</nav>
 	</div>
-</nav>
-</div>
-<a id="home"></a>
+	<a id="home"></a>
 
-	<div class="row">
-<div class="masthead" style="background-color: black;">
-  <div class="container h-100">
-	  <br><br><br><br><br><br><br>
-	  
-        <p style="color: white; font-size: 55px;">Steven Medeot</p>
-			<img src="steve.jpg" width="200px" class="img-thumbnail" ></img>
-    
-  </div>
-</div>
-</div>
-	<div class="row green-bg">
-		<div class="col-sm-2">
-		</div>
-		<div class="col-sm-8">
-			<h1>Who am I?</h1>
-			
-			<p>My name is Steven, I am a George Brown College Graduate and a current Ryerson University student studying Computer Science. 
-			I have a strong background in working within a team and always strive for exellence. <br><br>
-			
-			My favourite languages to work in are C++ and Java, and learning about game engine architecture is one of my hobbies within programming. 
-			</p>
-			 
-			
-		</div>
-
-		<div class="col-sm-2">
-		</div>
-	</div>
-
-	<a id="mobile"></a>
-	
-	<div class="row black-bg">
-	<h2> Mobile Projects </h2>
-		<div class="col-sm-1">
-		</div>
-		<div class="col-sm-5">
+		<div class="row">
+	<div class="masthead" style="background-color: black;">
+	<div class="container h-100">
+		<br><br><br><br><br><br><br>
 		
-			<img src="fyeng.jpg" height="40%" width="40%" class="img-thumbnail"></img>
-		</div>
-		
-		<div class="col-sm-5">
-		<div class="vCenter">
-			<h4> Ryerson FYEng Application (Ongoing)</h4>
+			<p style="color: white; font-size: 55px;">Steven Medeot</p>
+			<div class="col-sm-8">
 			
-			A cross platform mobile application made in Xamarin C# for both IOS and Android Devices. It is fully featured and includes a scheduler, announcements/tip notifications and reminders, as well as easy access to all information new students will need when coming into Ryerson First Year Engineering Courses.
-			<br>
-			<a href="https://apps.apple.com/us/app/fyeng-mobile/id1148681745"> IOS Download </a>
-			<br>
-			<a href="https://play.google.com/store/apps/details?id=com.companyname.newdbapp&hl=en_CA"> Android Download </a>
-			</div>
-		</div>
-		
-		<div class="col-sm-1">
-		</div>
-	</div>
-
-<a id="unity"></a>
-	<div class="row green-bg">
-	<h2> Unity Engine Projects </h2>
-		<div class="col-sm-4">
-						
-				<div class="vCenter">
-
-				</div>
-				</div>
-				<div class="col-sm-4">
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-  </ol>
-
-			<div class="carousel-inner">
-			<div class="item active">
-			<img src="Centripetal.gif">
-			</div>
-
-			<div class="item">
-			<img src="Kinetic.png">
-			</div>
-			</div>
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-				<h4> FYEng Virtual Laboratory (Ongoing)</h4>
-			
-				A virtualization of school laboratories for students to enhance their understanding of Physics, Chemistry and Logical concepts. The lab keeps tracks of the simulation's the students have attempted, and how long they have spent on using the simulations. It also reinforces concepts through the use of pre-lab and post-lab quizzes.
-			<br>
-			<br>
-
-				</div>
+				<p>My name is Steven, I am a George Brown College Graduate and a current Ryerson University student studying Computer Science. 
+				I have a strong background in working within a team and always strive for exellence. <br><br>
 				
-				<div class="col-sm-4">
-				</div>
-		</div>
+				My favourite languages to work in are C++ and Java, and learning about game engine architecture is one of my hobbies within programming. 
+				</p>
+			</div>
+	</div>
+	</div>
+	</div>
 
-	<div class="row green-bg">
-		<div class="col-sm-4">
+		<a id="mobile"></a>
+		
+		<div class="row black-bg">
+		<h2> Mobile Projects </h2>
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-5">
+			
+				<img src="fyeng.jpg" height="40%" width="40%" class="img-thumbnail"></img>
+			</div>
+			
+			<div class="col-sm-5">
+			<div class="vCenter">
+				<h4> Ryerson FYEng Application (Ongoing)</h4>
 				
-		<div class="vCenter">
-		<img src="errant.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-			<h4> Errant Priest - Global Game Jam (2016)</h4>
-			
-			Errant Priest is a 2D side scrolling adventure game. The player gets "Potential Mana" from killing enemies and does not get to use it until the player performs a ritual at any shrine. The player then gets to chose which spells they wants to bring to the field to combat their enemies.
-			<br>
-			<a href="https://globalgamejam.org/2016/games/errant-priest">Global Game Jam Page </a>
+				A cross platform mobile application made in Xamarin C# for both IOS and Android Devices. It is fully featured and includes a scheduler, announcements/tip notifications and reminders, as well as easy access to all information new students will need when coming into Ryerson First Year Engineering Courses.
+				<br>
+				<a href="https://apps.apple.com/us/app/fyeng-mobile/id1148681745"> IOS Download </a>
+				<br>
+				<a href="https://play.google.com/store/apps/details?id=com.companyname.newdbapp&hl=en_CA"> Android Download </a>
 				</div>
-		</div>
-		<div class="col-sm-4">
-		
-		<div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube.com/embed/zSsxq4Cf8wg" frameborder="0" allowfullscreen
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-			<h4> Hammerfirst (2015)</h4>
-			
-			A game where First-Person Brawling meets Boxercising. Developed in Unity using a Myo Armband as the controller. The player takes control of a descendant of a god to fight creatures that have escaped from their prison. I worked on core gameplay mechanics, such as Punching and Blocking.
-
-			
-		</div>
-		
-		<div class="col-sm-4">
-			<img src="spelunky.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-			<h4> Spooky Spelunky - Global Game Jam (2015)</h4>
-			
-			You and another player take control of two miners who have just survived a cave in and must now navigate your way through the labyrinth of mineshafts and fend off horrible creatures. One player takes the responsibility of fighting while the other must hold up the flash light to illuminate the pitch black caves.
-
- 
-			<br>
-			
-			<a href="https://globalgamejam.org/2015/games/spooky-spelunky"> Global Game Jam Page </a>
-		</div>
-
-	</div>
-		
-	<a id="unreal"></a>
-	
-	
-	<div class="row black-bg">
-	<h2> Unreal Engine Projects </h2>
-		<div class="col-sm-1">
-		</div>
-		<div class="col-sm-5">
-		<div class="vCenter">
-		<h4>BatteryNAssault (2016)</h4>
-		
-		BatteryNAssault is a 3v3 third person shooter arena. It was developed in my last year of college as a group assignment. I mainly worked on the AI portion of the game, but helped out whenever other students needed it. One of the students attempted to get the multiplayer in by the end of the semester but sadly we fell short and could only get some things to replicate.	
-		</div>
-		
-		</div>
-		
-		<div class="col-sm-5">
-
-		
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-  </ol>
-
-			<div class="carousel-inner">
-			<div class="item active">
-			<img src="BnA2.jpg">
 			</div>
-
-			<div class="item">
-			<img src="BnA.jpg">
+			
+			<div class="col-sm-1">
 			</div>
-			</div>
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 		</div>
-		
-		<div class="col-sm-1">
-		</div>
-	</div>
-	
 
-	
-	<a id="other"></a>
+	<a id="unity"></a>
 		<div class="row green-bg">
-	<h2> Other Projects </h2>
-		<div class="col-sm-1">
-		</div>
-		<div class="col-sm-5">
-		<div class="vCenter">
-			<h4> StevEngine (2017)</h4>
-			
-			This engine is a colaboration between my friend Luc and I. It is created using Open GL 4.2 for rendering, Bullet Physics, and FMOD for sound. It has model loading, 3D Sound, Frustum culling, render batching, and more.
-			</div>
-		
-		</div>
-		
-		<div class="col-sm-5">
-			<img src="stevEngine.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-		</div>
-		
-		<div class="col-sm-1">
-		</div>
+		<h2> Unity Engine Projects </h2>
+			<div class="col-sm-4">
+							
+					<div class="vCenter">
+
+					</div>
+					</div>
+					<div class="col-sm-4">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+	</ol>
+
+				<div class="carousel-inner">
+				<div class="item active">
+				<img src="Centripetal.gif">
+				</div>
+
+				<div class="item">
+				<img src="Kinetic.png">
+				</div>
+				</div>
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
 	</div>
+					<h4> FYEng Virtual Laboratory (Ongoing)</h4>
+				
+					A virtualization of school laboratories for students to enhance their understanding of Physics, Chemistry and Logical concepts. The lab keeps tracks of the simulation's the students have attempted, and how long they have spent on using the simulations. It also reinforces concepts through the use of pre-lab and post-lab quizzes.
+				<br>
+				<br>
+
+					</div>
+					
+					<div class="col-sm-4">
+					</div>
+			</div>
+
+		<div class="row green-bg">
+			<div class="col-sm-4">
+					
+			<div class="vCenter">
+			<img src="errant.jpg" height="75%" width="75%" class="img-thumbnail"></img>
+				<h4> Errant Priest - Global Game Jam (2016)</h4>
+				
+				Errant Priest is a 2D side scrolling adventure game. The player gets "Potential Mana" from killing enemies and does not get to use it until the player performs a ritual at any shrine. The player then gets to chose which spells they wants to bring to the field to combat their enemies.
+				<br>
+				<a href="https://globalgamejam.org/2016/games/errant-priest">Global Game Jam Page </a>
+					</div>
+			</div>
+			<div class="col-sm-4">
+			
+			<div style="position:relative;padding-top:56.25%;">
+	<iframe src="https://www.youtube.com/embed/zSsxq4Cf8wg" frameborder="0" allowfullscreen
+		style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+	</div>
+				<h4> Hammerfirst (2015)</h4>
+				
+				A game where First-Person Brawling meets Boxercising. Developed in Unity using a Myo Armband as the controller. The player takes control of a descendant of a god to fight creatures that have escaped from their prison. I worked on core gameplay mechanics, such as Punching and Blocking.
+
+				
+			</div>
+			
+			<div class="col-sm-4">
+				<img src="spelunky.jpg" height="75%" width="75%" class="img-thumbnail"></img>
+				<h4> Spooky Spelunky - Global Game Jam (2015)</h4>
+				
+				You and another player take control of two miners who have just survived a cave in and must now navigate your way through the labyrinth of mineshafts and fend off horrible creatures. One player takes the responsibility of fighting while the other must hold up the flash light to illuminate the pitch black caves.
+
 	
-</div>
+				<br>
+				
+				<a href="https://globalgamejam.org/2015/games/spooky-spelunky"> Global Game Jam Page </a>
+			</div>
+
+		</div>
+			
+		<a id="unreal"></a>
+		
+		
+		<div class="row black-bg">
+		<h2> Unreal Engine Projects </h2>
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-5">
+			<div class="vCenter">
+			<h4>BatteryNAssault (2016)</h4>
+			
+			BatteryNAssault is a 3v3 third person shooter arena. It was developed in my last year of college as a group assignment. I mainly worked on the AI portion of the game, but helped out whenever other students needed it. One of the students attempted to get the multiplayer in by the end of the semester but sadly we fell short and could only get some things to replicate.	
+			</div>
+			
+			</div>
+			
+			<div class="col-sm-5">
+
+			
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+	</ol>
+
+				<div class="carousel-inner">
+				<div class="item active">
+				<img src="BnA2.jpg">
+				</div>
+
+				<div class="item">
+				<img src="BnA.jpg">
+				</div>
+				</div>
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+	</div>
+			</div>
+			
+			<div class="col-sm-1">
+			</div>
+		</div>
+		
+
+		
+		<a id="other"></a>
+			<div class="row green-bg">
+		<h2> Other Projects </h2>
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-5">
+			<div class="vCenter">
+				<h4> StevEngine (2017)</h4>
+				
+				This engine is a colaboration between my friend Luc and I. It is created using Open GL 4.2 for rendering, Bullet Physics, and FMOD for sound. It has model loading, 3D Sound, Frustum culling, render batching, and more.
+				</div>
+			
+			</div>
+			
+			<div class="col-sm-5">
+				<img src="stevEngine.jpg" height="75%" width="75%" class="img-thumbnail"></img>
+			</div>
+			
+			<div class="col-sm-1">
+			</div>
+		</div>
+		
+	</div>
 </body>
 
 </html>
