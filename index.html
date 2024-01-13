@@ -3,275 +3,249 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </head>
 <style>
-	body
-	{
-		color: black;
-		text-align: center;
-		font: 18px Montserrat, sans-serif;
-    	line-height: 1.5;
+		
+	body {
+		font-family: "Arial";
+		line-height: 1;
+		color: #ffffff;
+		background-color: #000000;
+		text-transform: uppercase;
+		overflow: hidden;
 	}
-	
-	col-sm-8
-	{
-		text-align: center;
+
+	.navigation {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100vw;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		z-index: 1;
 	}
-	
-	h4
-	{
-		text-decoration: underline;	
+	.navigation a {
+		text-decoration: none;
+		color: inherit;
+		padding: 0.5rem 6vmax;
+		font-size: 1rem;
+		border: 1px solid;
+		border-radius: 2rem;
+		margin: 1rem auto;
 	}
-	.black-bg
-	{
-		background-color: blanchedalmond;
-		color: black;
+	.navigation a:hover {
+		background-color: #252525;
+		color: #fdfdfd;
 	}
-	
-	.green-bg
-	{			
-		background-color: black;
-		color: white;
+	.navigation a.active {
+		background-color: #252525;
+		color: #fdfdfd;
 	}
-	.masthead {
-		height: 100vh;
-		min-height: 500px;
+
+	#page {
+		min-width: 100vw;
+		min-height: 100vh;
 	}
-	.col-sm-6
-	{
-		padding: 50px;
+
+	.pageContainer {
+		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		inset: 0;
+	}
+
+	.loader {
+		position: absolute;
+		inset: 0;
+		z-index: 5;
+		background-color: #252525;
+		transform: translatex(0%);
+		transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.1s;
+		will-change: transform;
+	}
+
+	.a,	.b, .c {
+		display: flex;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition-property: opacity, visibility;
+		transition-duration: 0.5s;
+		transition-delay: -0.1s;
+		transition-timing-function: ease-in-out;
+		height: 100%;
+	}
+
+	.ac {
 		margin: auto;
 	}
+
+	[data-route=c] .c, [data-route=b] .b, [data-route=a] .a {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		transition: opacity 0.5s ease-in 0.9s;
+	}
+
+	.disable-hover,
+	.disable-hover * {
+		pointer-events: none !important;
+		cursor: none;
+		cursor: wait;
+	}
 </style>
-<body>
-	<div class="container-fluid text-center">
-		<div class="row">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
+<body id="body">
+	<div id="page">
+		<div class="navigation">
+			<a class="active" href="" onClick="onRouteClick('a')">
+				about
+			</a>
+			<a href="" onClick="onRouteClick('b')">
+				work
+			</a>
 		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-		<ul class="nav navbar-nav">
-		<li><a href="#home">Home</a></li>
-		<li class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-			<span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			<li><a href="#unity">Unity 3D</a></li>
-			<li><a href="#unreal">Unreal Engine</a></li>
-			<li><a href="#mobile">Mobile</a></li>
-			<li><a href="#other">Other</a><li>
-			</ul>
-		</li>
-		<li><a href="https://github.com/StevenMedeot">GitHub</a></li>
-		</ul>
-		</div>
-		</div>
-	</nav>
-	</div>
-	<a id="home"></a>
-
-		<div class="row">
-	<div class="masthead" style="background-color: black;">
-	<div class="container h-100">
-		<div style="right: 50%; bottom: 50%; transform: translate(50%,50%); position: absolute;">
-			<p style="color: white; font-size: 55px;">Steven Medeot</p>
-			<p style="color: white;">Software Developer, Full Stack</p>
-		</div>
-	</div>
-	</div>
-	</div>
-		<a id="mobile"></a>
-		<div class="row black-bg">
-		<h2> Mobile Projects </h2>
-			<div class="col-sm-1">
-			</div>
-			<div class="col-sm-5" style="padding-bottom: 50px">
-			
-				<img src="fyeng.jpg" height="40%" width="40%" class="img-thumbnail"></img>
-			</div>
-			
-			<div class="col-sm-5">
-			<div class="vCenter">
-				<h4> Ryerson FYEng Application (Ongoing)</h4>
-				
-				A cross platform mobile application made in Xamarin C# for both IOS and Android Devices. It is fully featured and includes a scheduler, announcements/tip notifications and reminders, as well as easy access to all information new students will need when coming into Ryerson First Year Engineering Courses.
-				<br>
-				<a href="https://apps.apple.com/us/app/fyeng-mobile/id1148681745"> IOS Download </a>
-				<br>
-				<a href="https://play.google.com/store/apps/details?id=com.companyname.newdbapp&hl=en_CA"> Android Download </a>
+		<div class="loader"></div>
+		<div class="pageContainer">
+			<div class="a">
+			  <div class="at ac">
+				<div style="font-size: 55px">
+					Steven Medeot <br>
 				</div>
-			</div>
-			
-			<div class="col-sm-1">
+				<div>
+					Full Stack Developer<br> <br>
+					Email: stermes66@gmail.com <br> <br>
+					Phone Number: 416-906-7809
+				</div>
+			  </div>
 			</div>
 		</div>
-
-	<a id="unity"></a>
-		<div class="row green-bg">
-			<h2> Unity Engine Projects </h2>
-			<div class="col-sm-6">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-				</ol>
-
-				<div class="carousel-inner">
-				<div class="item active">
-				<img src="Centripetal.gif">
-				</div>
-
-				<div class="item">
-				<img src="Kinetic.png">
-				</div>
-				</div>
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
-		</div>
-			<h4> FYEng Virtual Laboratory</h4>
-					
-						A virtualization of school laboratories for students to enhance their understanding of Physics, Chemistry and Logical concepts. The lab keeps tracks of the simulation's the students have attempted, and how long they have spent on using the simulations. It also reinforces concepts through the use of pre-lab and post-lab quizzes.
-					<br>
-					<br>
-
-			</div>
-			<div class="col-sm-6">
-						
-				<div class="vCenter">
-				<img src="errant.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-					<h4> Errant Priest - Global Game Jam (2016)</h4>
-					
-					Errant Priest is a 2D side scrolling adventure game. The player gets "Potential Mana" from killing enemies and does not get to use it until the player performs a ritual at any shrine. The player then gets to chose which spells they wants to bring to the field to combat their enemies.
-					<br>
-					<a href="https://globalgamejam.org/2016/games/errant-priest">Global Game Jam Page </a>
+		<div class="pageContainer" style="top: 100px">
+			<div class="b">
+				<div class="bt ac">
+					<div style="position: relative; left: 0%;">
+						<div style="padding: 25px">
+							<div style="font-size: 40px;">
+								Ryerson FYEng Application
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-2">
+										<img src="fyeng.jpg" class="img-thumbnail"></img>
+									</div>
+									<div class="col-10">
+										A cross platform mobile application made in Xamarin C# for both IOS and Android Devices. It is fully featured and includes a scheduler, announcements/tip notifications and reminders, as well as easy access to all information new students will need when coming into Ryerson First Year Engineering Courses.
+										<br>
+										<a href="https://apps.apple.com/us/app/fyeng-mobile/id1148681745"> IOS Download </a>
+										<br>
+										<a href="https://play.google.com/store/apps/details?id=com.companyname.newdbapp&hl=en_CA"> Android Download </a>
+									</div>
+								</div>
+							</div>
 						</div>
-			</div>
-			
-		</div>
-
-		<div class="row green-bg">
-			<div class="col-sm-6">
-			
-			<div style="position:relative;padding-top:56.25%;">
-	<iframe src="https://www.youtube.com/embed/zSsxq4Cf8wg" frameborder="0" allowfullscreen
-		style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-	</div>
-				<h4> Hammerfirst (2015)</h4>
-				
-				A game where First-Person Brawling meets Boxercising. Developed in Unity using a Myo Armband as the controller. The player takes control of a descendant of a god to fight creatures that have escaped from their prison. I worked on core gameplay mechanics, such as Punching and Blocking.
-
-				
-			</div>
-			
-			<div class="col-sm-6">
-				<img src="spelunky.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-				<h4> Spooky Spelunky - Global Game Jam (2015)</h4>
-				
-				You and another player take control of two miners who have just survived a cave in and must now navigate your way through the labyrinth of mineshafts and fend off horrible creatures. One player takes the responsibility of fighting while the other must hold up the flash light to illuminate the pitch black caves.
-
-	
-				<br>
-				
-				<a href="https://globalgamejam.org/2015/games/spooky-spelunky"> Global Game Jam Page </a>
-			</div>
-
-		</div>
-			
-		<a id="unreal"></a>
-		
-		
-		<div class="row black-bg">
-		<h2> Unreal Engine Projects </h2>
-			<div class="col-sm-1">
-			</div>
-			<div class="col-sm-5">
-			<div class="vCenter">
-			<h4>BatteryNAssault (2016)</h4>
-			
-				BatteryNAssault is a 3v3 third person shooter arena. It was developed in my last year of college as a group assignment. I mainly worked on the AI portion of the game, but helped out whenever other students needed it. One of the students attempted to get the multiplayer in by the end of the semester but sadly we fell short and could only get some things to replicate.	
-			</div>
-			
-			</div>
-			
-			<div class="col-sm-5" style="padding-bottom: 50px">
-
-			
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-	</ol>
-
-				<div class="carousel-inner">
-				<div class="item active">
-				<img src="BnA2.jpg">
+						<div style="padding: 25px">
+							<div style="font-size: 40px;">
+							FYEng Virtual Laboratory
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-4">
+										<div id="labControls" class="carousel slide" data-ride="carousel">
+											<div class="carousel-inner">
+												<div class="carousel-item active">
+												  <img class="d-block w-100" src="Kinetic.png" alt="First slide">
+												</div>
+												<div class="carousel-item">
+												  <img class="d-block w-100" src="Centripetal.gif" alt="Second slide">
+												</div>
+											  </div>
+										</div>
+									</div>
+									<div class="col-8">
+										A cross platform mobile application made in Xamarin C# for both IOS and Android Devices. It is fully featured and includes a scheduler, announcements/tip notifications and reminders, as well as easy access to all information new students will need when coming into Ryerson First Year Engineering Courses.
+										<br>
+										<a href="https://apps.apple.com/us/app/fyeng-mobile/id1148681745"> IOS Download </a>
+										<br>
+										<a href="https://play.google.com/store/apps/details?id=com.companyname.newdbapp&hl=en_CA"> Android Download </a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="padding: 25px">
+							<div style="font-size: 40px;">
+							StevEngine
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-4">
+										<img src="stevEngine.jpg" height="75%" width="75%" class="img-thumbnail"></img>
+									</div>
+									<div class="col-8">
+										This engine is a colaboration between a classmate; Luc and myself. It is created using Open GL 4.2 for rendering, Bullet Physics, and FMOD for sound. It has model loading, 3D Sound, Frustum culling, render batching, and more.
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>	
 				</div>
-
-				<div class="item">
-				<img src="BnA.jpg">
-				</div>
-				</div>
-	<!-- Left and right controls -->
-	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#myCarousel" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right"></span>
-		<span class="sr-only">Next</span>
-	</a>
-	</div>
-			</div>
-			
-			<div class="col-sm-1">
 			</div>
 		</div>
-		
-
-		
-		<a id="other"></a>
-			<div class="row green-bg">
-		<h2> Other Projects </h2>
-			<div class="col-sm-1">
-			</div>
-			<div class="col-sm-5" >
-			<div class="vCenter">
-				<h4> StevEngine (2017)</h4>
-				
-				This engine is a colaboration between my friend Luc and I. It is created using Open GL 4.2 for rendering, Bullet Physics, and FMOD for sound. It has model loading, 3D Sound, Frustum culling, render batching, and more.
-				</div>
-			
-			</div>
-			
-			<div class="col-sm-5" style="padding-bottom: 50px">
-				<img src="stevEngine.jpg" height="75%" width="75%" class="img-thumbnail"></img>
-			</div>
-			
-			<div class="col-sm-1">
-			</div>
-		</div>
-		
 	</div>
 </body>
 
+<script>
+	const appRoot = document.getElementById("page");
+	const nav = document.querySelector(".navigation");
+	const root=document.documentElement;
+	const endTransition = () => {
+	const loader = document.querySelector(".loader");
+	loader.addEventListener("transitionend", () => {
+		loader.style.transform = "translateX(100%)";
+		root.classList.remove("disable-hover");
+	});
+	loader.style.transform = "";
+	};
+
+	const startTransition = () => {
+	const loader = document.querySelector(".loader");
+		loader.style.transform = "translateX(100%)";
+		appRoot.dataset.route = "a";
+	};
+
+	nav.addEventListener("click", (e) => {
+	if (e.target.nodeName === "A") {
+		let a = Array.from(nav.children).find((v) => v.closest(".active"));
+		root.classList.add("disable-hover");
+		a.classList.remove("active");
+		e.target.classList.add("active");
+		e.preventDefault();
+	}
+	});
+
+	const onRouteClick = (route) => {
+		window.scrollTo(0, 0);
+		body = document.getElementById("body")
+		if (route === "b") {
+			body = body.style.overflowY = "scroll";
+		}
+		else {
+			body = body.style.overflowY = "hidden";
+		}
+		if (appRoot.dataset.route === route) return;
+		appRoot.dataset.route = route;
+		endTransition();
+	};
+
+	window.addEventListener("load", () => {
+		startTransition();
+	});
+</script>
 </html>
 
 
